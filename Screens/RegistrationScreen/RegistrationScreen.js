@@ -1,10 +1,27 @@
-import React from "react";
-// import BackGroundImage from "../imgs/Photo_BG.jpg";
-// const BackGroundImage = require("../imgs/Photo_BG.jpg");
-// export const RegistrationScreen = () => {
-//   return (
-//     <View>
-//       <ImageBackground source={BackGroundImage} />
-//     </View>
-//   );
-// };
+import {
+  StyleSheet,
+  Image,
+  ImageBackground,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
+import bgImage from "../imgs/photo_BG.jpg";
+
+const styles = StyleSheet.create({
+  imgBg: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  form: {
+    position: "relative",
+  },
+});
+
+const RegistrationScreen = () => {
+  return (
+    <ImageBackground source={bgImage} resizeMode="cover" style={styles.imgBg}>
+      <View style={styles.form}></View>
+    </ImageBackground>
+  );
+};
+export default RegistrationScreen;
