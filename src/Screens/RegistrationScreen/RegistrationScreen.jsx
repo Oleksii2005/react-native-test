@@ -59,6 +59,11 @@ const RegistrationScreen = () => {
                   </TouchableOpacity>
                 </View>
                 <Button text={"Register"} styleProps={{ marginTop: 27 }} />
+                <TouchableOpacity>
+                  <Text style={styles.bottomTitle}>
+                    Already have an account? Log in.
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
           </KeyboardAvoidingView>
@@ -124,6 +129,16 @@ const styles = StyleSheet.create({
     // fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 20,
+  },
+  bottomTitle: {
+    color: "#1B4371",
+    textAlign: "center",
+    // fontFamily: 'Roboto',
+    fontSize: 16,
+    // fontStyle: 'normal',
+    fontWeight: "400",
+    lineHeight: 24,
+    marginTop: 16,
   },
 });
 export default RegistrationScreen;
