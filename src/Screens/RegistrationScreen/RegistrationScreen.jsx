@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { Input } from "../../components/index.js";
+import { Button, Input } from "../../components/index.js";
+// import { Button } from "../../components/index.js";
 // import { Btn, Input } from "../../components/index.js";
 // import Svg, { Path, Circle, Rect } from "react-native-svg";
 const RegistrationScreen = () => {
@@ -30,29 +31,6 @@ const RegistrationScreen = () => {
                 >
                   <Image source={require("../../../assets/images/plus.png")} />
                 </TouchableOpacity>
-                {/* <Svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="132"
-                    height="120"
-                    viewBox="0 0 132 120"
-                    fill="none"
-                  >
-                    <Circle
-                      cx="119.5"
-                      cy="93.5"
-                      r="12"
-                      fill="white"
-                      stroke="#FF6C00"
-                    />
-                    <Path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M120 87H119V93H113V94H119V100H120V94H126V93H120V87Z"
-                      fill="#FF6C00"
-                    />
-                  </Svg> */}
-
-                {/* </TouchableOpacity> */}
               </View>
               <View style={styles.mainContent}>
                 <Text style={styles.title}>Sign up</Text>
@@ -60,7 +38,27 @@ const RegistrationScreen = () => {
               <View>
                 <Input placeholder="Login" />
                 <Input placeholder="Email" />
-                <Input placeholder="Password" />
+                <View style={{ position: "relative" }}>
+                  <Input placeholder="Password" />
+                  <TouchableOpacity
+                    activeOpacity={0.6}
+                    style={{
+                      position: "absolute",
+                      right: 30,
+                      top: 17,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        color: "#1B4371",
+                        fontSize: 16,
+                      }}
+                    >
+                      Show
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                <Button text={"Register"} styleProps={{ marginTop: 27 }} />
               </View>
             </View>
           </KeyboardAvoidingView>
@@ -116,6 +114,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginTop: 92,
     marginBottom: 33,
+  },
+  placeholder: {
+    alignSelf: "flex-end",
+    color: "#1B4371",
+    textAlign: "right",
+    // fontFamily: "Roboto",
+    fontSize: 16,
+    // fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: 20,
   },
 });
 export default RegistrationScreen;

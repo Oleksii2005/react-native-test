@@ -1,18 +1,31 @@
-import { Button, StyleSheet } from "react-native";
-const Btn = () => {
-  return <Button style={styles.btn}>Register</Button>;
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import React from "react";
+
+const Button = ({ text, styleProps }) => {
+  return (
+    <TouchableOpacity
+      activeOpacity={0.7}
+      style={{ ...styles.button, ...styleProps }}
+    >
+      <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+  );
 };
+
 const styles = StyleSheet.create({
-  btn: {
-    display: "flex",
-    width: 343,
-    padding: 16,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 100,
+  button: {
+    marginLeft: 16,
+    marginRight: 16,
+    paddingHorizontal: 32,
+    paddingVertical: 16,
     backgroundColor: "#FF6C00",
-    paddingTop: 85,
+    borderRadius: 100,
+  },
+  text: {
+    textAlign: "center",
+    fontSize: 16,
+    color: "#fff",
   },
 });
-export default Btn;
+
+export default Button;

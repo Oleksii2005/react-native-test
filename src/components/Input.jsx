@@ -11,6 +11,8 @@ const Input = ({ placeholder, styleProps }) => {
 };
 const styles = StyleSheet.create({
   input: {
+    marginLeft: 16,
+    marginRight: 16,
     paddingVertical: 15,
     paddingHorizontal: 16,
     marginBottom: 16,
