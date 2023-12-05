@@ -9,9 +9,7 @@ import {
   Image,
 } from "react-native";
 import { Button, Input } from "../../components/index.js";
-// import { Button } from "../../components/index.js";
-// import { Btn, Input } from "../../components/index.js";
-// import Svg, { Path, Circle, Rect } from "react-native-svg";
+
 const RegistrationScreen = () => {
   return (
     <TouchableWithoutFeedback>
@@ -61,7 +59,7 @@ const RegistrationScreen = () => {
                 <Button text={"Register"} styleProps={{ marginTop: 27 }} />
                 <TouchableOpacity>
                   <Text style={styles.bottomTitle}>
-                    Already have an account? Log in.
+                    Already have an account? Sign in.
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -108,10 +106,10 @@ const styles = StyleSheet.create({
   title: {
     color: "#212121",
     textAlign: "center",
-    // fontFamily: "Roboto",
+    fontFamily: "Roboto",
     fontSize: 30,
-    // fontStyle: 500,
-    // lineHeight: "normal",
+    fontStyle: 500,
+    lineHeight: "normal",
     letterSpacing: 0,
   },
   mainContent: {
@@ -124,18 +122,18 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     color: "#1B4371",
     textAlign: "right",
-    // fontFamily: "Roboto",
+    fontFamily: "Roboto",
     fontSize: 16,
-    // fontStyle: "normal",
+    fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 20,
   },
   bottomTitle: {
     color: "#1B4371",
     textAlign: "center",
-    // fontFamily: 'Roboto',
+    fontFamily: "Roboto",
     fontSize: 16,
-    // fontStyle: 'normal',
+    fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 24,
     marginTop: 16,
