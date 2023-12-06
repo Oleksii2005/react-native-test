@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   TouchableWithoutFeedback,
   Text,
@@ -11,6 +12,10 @@ import {
 import { Button, Input } from "../../components/index.js";
 
 const RegistrationScreen = () => {
+  const [login, setLogin] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <TouchableWithoutFeedback>
       <View style={styles.container}>
@@ -34,10 +39,22 @@ const RegistrationScreen = () => {
                 <Text style={styles.title}>Sign up</Text>
               </View>
               <View>
-                <Input placeholder="Login" />
-                <Input placeholder="Email" />
+                <Input
+                  placeholder="Login"
+                  value={login}
+                  onChangeText={setLogin}
+                />
+                <Input
+                  placeholder="Email"
+                  value={email}
+                  onChangeText={setEmail}
+                />
                 <View style={{ position: "relative" }}>
-                  <Input placeholder="Password" />
+                  <Input
+                    placeholder="Password"
+                    value={password}
+                    onChangeText={setPassword}
+                  />
                   <TouchableOpacity
                     activeOpacity={0.6}
                     style={{

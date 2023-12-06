@@ -5,15 +5,15 @@ import { LoginScreen, RegistrationScreen } from "./src/Screens/index.js";
 // import RegistrationScreen from "./src/Screens/RegistrationScreen/RegistrationScreen";
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    "Roboto-regular": require("./assets/fonts/Roboto-Regular.ttf"),
-    "Roboto-medium": require("./assets/fonts/Roboto-Medium.ttf"),
-    "Roboto-bold": require("./assets/fonts/Roboto-Bold.ttf"),
-  });
+  // const [fontsLoaded] = useFonts({
+  //   "Roboto-regular": require("./assets/fonts/Roboto-Regular.ttf"),
+  //   "Roboto-medium": require("./assets/fonts/Roboto-Medium.ttf"),
+  //   "Roboto-bold": require("./assets/fonts/Roboto-Bold.ttf"),
+  // });
 
-  if (!fontsLoaded) {
-    return null;
-  }
+  // if (!fontsLoaded) {
+  //   return null;
+  // }
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />

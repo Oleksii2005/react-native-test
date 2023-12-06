@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ImageBackground,
   TouchableWithoutFeedback,
@@ -9,6 +10,8 @@ import {
 } from "react-native";
 import { Input, Button } from "../../components/index.js";
 const LoginScreen = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <TouchableWithoutFeedback>
       <View style={styles.container}>
@@ -24,9 +27,17 @@ const LoginScreen = () => {
                 <Text style={styles.title}>Sign in</Text>
               </View>
               <View>
-                <Input placeholder="Email" />
+                <Input
+                  placeholder="Email"
+                  value={email}
+                  onChangeText={setEmail}
+                />
                 <View style={{ position: "relative" }}>
-                  <Input placeholder="Password" />
+                  <Input
+                    placeholder="Password"
+                    value={password}
+                    onChangeText={setPassword}
+                  />
                   <TouchableOpacity
                     activeOpacity={0.6}
                     style={{
