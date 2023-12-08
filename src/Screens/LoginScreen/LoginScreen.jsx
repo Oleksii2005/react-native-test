@@ -12,6 +12,9 @@ import { Input, Button } from "../../components/index.js";
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+
   return (
     <TouchableWithoutFeedback>
       <View style={styles.container}>
